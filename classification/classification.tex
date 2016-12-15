@@ -124,20 +124,27 @@ Then, influence of covariance matrix is evaluated. We've seen previously that wi
 In this section, we will consider two different Support Vector Machine algorithm. The first one performs linear classification and consist of one hyper-parameter which is C-Value. The second algorithm “RBF kernel” perform a non linear classification with one more hyper-parameter : the kernel width. The C-Value controls the influence of each individual support vector. A large C-Value will penalize the cost of misclassification dataset a lot. The best C-value is a trade-off between maximizing the margin and minimizing the classification errors. The kernel width defines the width of the kernel function. Large kernel width would imply a smoother fit and thus having a larger influence of neighborhood data point and vice-versa. 
 
 \subsubsection{Linear}
-As we can observe on figure \ref{fig:SVM_linear_C_value}, the resulting classification for different C-value and fixed train ratio (25\%). We note for the C-value : 0.5, there are 15 support vectors and 8 points misclassified. Then with higher C-value, we penalize the cost of misclassified data points in order to reduce them. The figure \ref{fig:SVM_linear_C_value_5} has still one misclassified points and 8 support vectors. The misclassified point is close to the other class, we can increase C-value and train ratio in order to reduce misclassified datapoints. Nevertheless, with a high C-value, the cost of misclassified datapoint will be high and the margin will reduce, thus forcing the algorithm to explain the data stricter and potentially overfit. The goal is to find a trade off between maximizing the margin and minimizing the classification errors. We can see an over-fitting case on figure %(SVM_linear(c=1000,TR=50))
+As we can observe on figure \ref{fig:SVM_linear_C_value}, the resulting classification for different C-value and fixed train ratio (25\%). We note for the C-value : 0.5, there are 15 support vectors and 8 points misclassified. Then with higher C-value, we penalize the cost of misclassified data points in order to reduce them. The figure \ref{fig:SVM_linear_C_value_5} has still one misclassified points and 8 support vectors. The misclassified point is close to the other class, we can increase C-value and train ratio in order to reduce misclassified datapoints. Nevertheless, with a high C-value, the cost of misclassified datapoint will be high and the margin will reduce, thus forcing the algorithm to explain the data stricter and potentially overfit. The goal is to find a trade off between maximizing the margin and minimizing the classification errors. We can see an over-fitting case on figure \ref{fig:SVM_linear_C_value_1000}%(SVM_linear(c=1000,TR=50))
 , which consist of only two support vectors and have a very low margin. Therefore, this model has a poor generalization.
 
 
 \begin{figure}[ht]
 \centering
 \begin{subfigure}[h]{0.31\textwidth}
+\includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_1000_TR_50_.png}
+\caption{\bf C-value : 1000 and train ratio : 50\%}
+\label{fig:SVM_linear_C_value_1000}
+\end{subfigure}
+\hspace{20mm}
+\begin{subfigure}[h]{0.31\textwidth}
 \includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_0_5_TR_25_.png}
 \caption{\bf C-value : 0.5 and train ratio : 25\%}
-\end{subfigure}
+\end{subfigure}\\
 \begin{subfigure}[h]{0.31\textwidth}
 \includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_1_TR_25_.png}
 \caption{\bf C-value : 1 and train ratio : 25\%}
 \end{subfigure}
+\hspace{20mm}
 \begin{subfigure}[h]{0.31\textwidth}
 \includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_5_TR_25_.png}
 \caption{\bf C-value : 5 and train ratio : 25\%}
@@ -151,17 +158,47 @@ As we can observe on figure \ref{fig:SVM_linear_C_value}, the resulting classifi
 
 In our case, the dataset is linearly separable thus the linear SVM algorithm is sufficient. However, we perform RBF SVM algorithm to understand the influence of the hyper-parameters.
 
-We observe on the figure %SVM_rbf(w=0.2,c=0.5,TR=25).png
-, the kernel width chosen is 0.2 and it seems to be the right size oh the kernel but we obtain 13 misclassified data points. This is due to the support vectors chosen by the algorithm. In order to perform a better model, we increase the C-Value to decrease the number of misclassified data points. On figure
+We observe on the figure \ref{fig:SVM_rbf_w_0_2_c_0_5_TR_25_} %SVM_rbf(w=0.2,c=0.5,TR=25).png
+, the kernel width chosen is 0.2 and it seems to be the right size oh the kernel but we obtain 13 misclassified data points. This is due to the support vectors chosen by the algorithm. In order to perform a better model, we increase the C-Value to decrease the number of misclassified data points. On figure \ref{fig:SVM_rbf_w_0_2_c_1_TR_25_}
 %SVM_rbf(w=0.2,c=1,TR=25)
-, it has one missclassified data point, nevertheless the classification has a good generalization. If we continue to increase the C-Value, as we observe on figure
+, it has one misclassified data point, nevertheless the classification has a good generalization. If we continue to increase the C-Value, as we observe on figure \ref{fig:SVM_rbf_w_0_2_c_10_TR_25_}
 %SVM_rbf(w=0.2,c=10,TR=25)
-, the classification has none misclasified data point but it seems to overfit the dataset.
-Finally, we try with a higher kernel width, as shown on figure
+, the classification has none misclassified data point but it seems to overfit the dataset.
+Finally, we try with a higher kernel width, as shown on figure \ref{fig:SVM_rbf_w_0_5_c_0_5_TR_25_}
 %SVM_rbf(w=0.5,c=0.5,TR=25)
-, the resulting classification has a good generalization and only one misclassified data point comparing to the figure 
+, the resulting classification has a good generalization and only one misclassified data point comparing to the figure \ref{fig:SVM_rbf_w_0_2_c_0_5_TR_25_}
 %SVM_rbf(w=0.2,c=0.5,TR=25).png
 , which has the same C-Value. Therefore, we can obtain better classification only by increasing the kernel width. 
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[h]{0.31\textwidth}
+\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_2_c_0_5_TR_25_.png}
+\caption{\bf C-value : 0.5 and kernel width : 0.2}
+\label{fig:SVM_rbf_w_0_2_c_0_5_TR_25_}
+\end{subfigure}
+\hspace{20mm}
+\begin{subfigure}[h]{0.31\textwidth}
+\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_2_c_1_TR_25_.png}
+\caption{\bf C-value : 1 and kernel width : 0.2}
+\label{fig:SVM_rbf_w_0_2_c_1_TR_25_}
+\end{subfigure}\\
+
+\begin{subfigure}[h]{0.31\textwidth}
+\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_2_c_10_TR_25_.png}
+\caption{\bf C-value : 10 and kernel width : 0.2}
+\label{fig:SVM_rbf_w_0_2_c_10_TR_25_}
+\end{subfigure}
+\hspace{20mm}
+\begin{subfigure}[h]{0.31\textwidth}
+\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_5_c_0_5_TR_25_.png}
+\caption{\bf C-value : 0.5 and kernel width : 0.5}
+\label{fig:SVM_rbf_w_0_5_c_0_5_TR_25_}
+\end{subfigure}
+
+\caption{SVM RBF : influence of kernel width and C-value}
+\label{fig:SVM_RBF}
+\end{figure}
 
 %ADD F-measure
 
