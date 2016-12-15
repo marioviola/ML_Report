@@ -147,24 +147,65 @@ which $k(x^{i},x)$ represents the kernel function, $\alpha_i$ is a linear coeffi
 
 \subsubsection{Qualitative evaluation}
 
-Firstly, we will perform a regression with a RBF kernel on the 2 dimensional dataset chosen. As we can see on the figure \textcolor{red}{X}
+Firstly, we will perform a regression with a RBF kernel on the 2 dimensional dataset chosen. As we can see on the figure \ref{fig_RBF_0_001_10_0_2_100}
 % ADD FIGURE RBF_0.001_10_0.2_100
-, the RBF kernel width is small (0.001), thus the kernel places a Gaussian function on each support vectors with a small standard deviation that why the regression overfit the data. Now, if we increase the kernel width (0.3), as shown in the figure \textcolor{red}{X}
+, the RBF kernel width is small (0.001), thus the kernel places a Gaussian function on each support vectors with a small standard deviation that why the regression overfit the data. Now, if we increase the kernel width (0.3), as shown in the figure \ref{fig_RBF_0_3_10_0_2_100}
 % ADD FIGURE RBF_0.3_10_0.2_100
 , the  Gaussian function on each support vectors is affected to a higher standard deviation. That means, each support vector will be influenced by the others support vectors neighbor. The resulting regression is smoother than the previous regression.
-In order to reduce the effect of the kernel width on the first regression, we reduce the penalty factor C (1.5 comparing to 10) that leads to reduce the overfitting, as we can see on figure \textcolor{red}{X}.
+In order to reduce the effect of the kernel width on the first regression, we reduce the penalty factor C (1.5 comparing to 10) that leads to reduce the overfitting, as we can see on figure \ref{fig_RBF_0_3_1_5_0_2_100}.
 % ADD FIGURE RBF_0.3_1.5_0.2_100
-If we reduce the size of the $\epsilon-tube$ (0.05 comparing to 0.2 for the previous regression), the resulting regression, on figure \textcolor{red}{X}, will overfit the data. 
+If we reduce the size of the $\epsilon-tube$ (0.05 comparing to 0.2 for the previous regression), the resulting regression, on figure \ref{fig_RBF_0_001_5_0_05_100}, will overfit the data. 
 % ADD FIGURE RBF_0.001_5_0.05_100
 
 % With Train test ration : 33%
-Then, we decrease the train test ratio to 33\%, the figure \textcolor{red}{X} show the obtained regression. We observe the number of support vector decrease and depend on the initialization.
+Then, we decrease the train test ratio to 33\%, the figure \ref{fig_RBF_0_001_10_0_15_33} show the obtained regression. We observe the number of support vector decrease and depend on the initialization.
 % ADD FIGURE RBF_0.001_10_0.15_33
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_10_0_2_100.png}
+\caption{\bf kernel : 0.001, C-value:10, $\epsilon-tube$ : 0.2, TR: 100\%}
+\label{fig_RBF_0_001_10_0_2_100}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_3_10_0_2_100.png}
+\caption{\bf kernel : 0.3, C-value:10, $\epsilon-tube$ : 0.2, TR: 100\%}
+\label{fig_RBF_0_3_10_0_2_100}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_3_1_5_0_2_100.png}
+\caption{\bf kernel : 0.3, C-value:1.5, $\epsilon-tube$ : 0.2, TR: 100\%}
+\label{fig_RBF_0_3_1_5_0_2_100}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_5_0_05_100.png}
+\caption{\bf kernel : 0.001, C-value:5, $\epsilon-tube$ : 0.05, TR: 100\%}
+\label{fig_RBF_0_001_5_0_05_100}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_10_0_15_33.png}
+\caption{\bf kernel : 0.001, C-value:10, $\epsilon-tube$ : 0.15, TR: 33\%}
+\label{fig_RBF_0_001_10_0_15_33}
+\end{subfigure}
+
+\caption{SVR : influence of differents parameters}
+\end{figure}
+
 
 \subsubsection{Quantitative evaluation}
 
 We performed several regression with different hyper parameters on the (N+1) dimensions dataset, then we compare the performance of the resulting regression in terms of Mean Square Error. 
-As shown on the figure \textcolor{red}{X}, the configuration which has the less error is one with the small kernel width. However, the algorithm with higher $\epsilon-tube$ has the a small variance and a larger error, that means the regression is reliable.
+As shown on the figure \ref{fig:quantitative_svr}, the configuration which has the less error is one with the small kernel width. However, the algorithm with higher $\epsilon-tube$ has the a small variance and a larger error, that means the regression is reliable.
 % ADD MSE qualitative 66
-
-% ADD MSE quantitative 33
+\begin{figure}[!ht]
+\centering
+\includegraphics[height=0.15\textheight]{./regression/MSE_quantitative_66.png}
+\caption{\bf Error testing - 66\% Training ratio}
+\label{fig:quantitative_svr}
+\end{figure}
