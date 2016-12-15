@@ -1,13 +1,15 @@
 \section{Clustering}
 %Show illustrative examples of good and bad clustering depending on the choice of hyperparameters for kNN and K-means. Compare K-means and kNN. Report on quantitative assessment of F-measure for semi-supervised clustering and how these vary depending on the ratio of labelled/unlabelled datapoints.
-	In this section, we will use three different clustering techniques and assess the performance of each by changing the hyperparameters. We tried to optimize the hyperparameters regardless of different measures, internal and external. These measures are introduced in the subsection \ref{metrics}.
-\subsection{Definition of different metrics}
-\label{metrics}
-\begin{itemize}
-\item \textbf{Residual Sum of Square} (\textit{RSS}) is an internal measure which computes the distance of each datapoint from its centroid for all clusters. The goal is to find the optimal K such that RSS measure tend to 0. The risk is to overfit on the dataset with a RSS equals to 0. To avoid this, we can use 2 regularization measures which are BIC and AIC.
-\item \textbf{Aikaike Information Criterion} (\textit{AIC}) and \textbf{Bayesian Information Criterion} (\textit{BIC}) are internal measures. They determine the level of fitting in a probabilistic sense with the maximum-likelihood $L$. 
-\item The \textbf{F-1 measure} is an external measure. In this case, it is a semi-supervised learning where we choose the number of labeled datapoints. This measure permits to compute \emph{recall} (proportion of datapoints correctly classified/clusterized) and \emph{precision} (proportion of datapoints of the same class in the cluster) in order to measure the cluster's accuracy. The higher F-1 measure is, the better is the clustering. 
-\end{itemize}
+	In this section, we will use three different clustering techniques and assess the performance of each by changing the hyperparameters. We tried to optimize the hyperparameters regardless of different measures, internal and external. 
+%These measures are introduced in the subsection \ref{metrics}
+	
+%\subsection{Definition of different metrics}
+%\label{metrics}
+%\begin{itemize}
+%\item \textbf{Residual Sum of Square} (\textit{RSS}) is an internal measure which computes the distance of each datapoint from its centroid for all clusters. The goal is to find the optimal K such that RSS measure tend to 0. The risk is to overfit on the dataset with a RSS equals to 0. To avoid this, we can use 2 regularization measures which are BIC and AIC.
+%\item \textbf{Aikaike Information Criterion} (\textit{AIC}) and \textbf{Bayesian Information Criterion} (\textit{BIC}) are internal measures. They determine the level of fitting in a probabilistic sense with the maximum-likelihood $L$. 
+%\item The \textbf{F-1 measure} is an external measure. In this case, it is a semi-supervised learning where we choose the number of labeled datapoints. This measure permits to compute \emph{recall} (proportion of datapoints correctly classified/clusterized) and \emph{precision} (proportion of datapoints of the same class in the cluster) in order to measure the cluster's accuracy. The higher F-1 measure is, the better is the clustering. 
+%\end{itemize}
 
 \subsection{Qualitative assessment}
 
