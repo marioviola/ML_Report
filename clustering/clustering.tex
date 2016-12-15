@@ -31,22 +31,22 @@ We note the borders are different for each distance. The \emph{Manhattan distanc
 \centering
 	\begin{subfigure}[h]{0.23\textwidth}
     \centering
-	\includegraphics[height=0.14\textheight]{./clustering/l1norm.png}
+	\includegraphics[height=0.08\textheight]{./clustering/l1norm.png}
 	\caption{\bf Manhattan}
 	\end{subfigure}
     \begin{subfigure}[h]{0.23\textwidth}
     \centering
-    \includegraphics[height=0.14\textheight]{./clustering/l2norm.png}
+    \includegraphics[height=0.08\textheight]{./clustering/l2norm.png}
 	\caption{\bf Euclidean}
     \end{subfigure}
     \begin{subfigure}[h]{0.23\textwidth}
     \centering
-   \includegraphics[height=0.14\textheight]{./clustering/l0norm.png}
+   \includegraphics[height=0.08\textheight]{./clustering/l0norm.png}
 	\caption{\bf Infinity}
     \end{subfigure}
     \begin{subfigure}[h]{0.23\textwidth}
     \centering
-    \includegraphics[height=0.14\textheight]{./clustering/lpnorm.png}
+    \includegraphics[height=0.08\textheight]{./clustering/lpnorm.png}
 	\caption{\bf Polynomial}
     \end{subfigure}
 \caption{K-means clustering method with different metrics}
@@ -61,17 +61,17 @@ In our case, we found that a value of 10 for $\beta$ gives a fairly good cluster
 \centering
 	\begin{subfigure}[h]{0.30\textwidth}
     \centering
-	\includegraphics[height=0.13\textheight]{./clustering/soft_k_mean_beta_4.png}
+	\includegraphics[height=0.08\textheight]{./clustering/soft_k_mean_beta_4.png}
 	\caption{$\boldsymbol \beta \bf = 4$}
 	\end{subfigure}
     \begin{subfigure}[h]{0.30\textwidth}
     \centering
-    \includegraphics[height=0.13\textheight]{./clustering/soft_k_mean_beta_10.png}
+    \includegraphics[height=0.08\textheight]{./clustering/soft_k_mean_beta_10.png}
 	\caption{$\boldsymbol \beta \bf = 10$}
     \end{subfigure}
     \begin{subfigure}[h]{0.30\textwidth}
     \centering
-    \includegraphics[height=0.13\textheight]{./clustering/soft_k_mean_beta_100.png}
+    \includegraphics[height=0.08\textheight]{./clustering/soft_k_mean_beta_100.png}
 	\caption{$\boldsymbol \beta \bf = 100$}
     \end{subfigure}
 \caption{Soft K-means clustering method with different values of $\beta$}
@@ -86,17 +86,17 @@ In this method, there are 2 hyperparameters $\epsilon$ and $m_{data}$. The varia
 \centering
 	\begin{subfigure}[h]{0.30\textwidth}
     \centering
-	\includegraphics[height=0.18\textheight]{./clustering/dbs_scan_eps_0100_min_3.png}
+	\includegraphics[height=0.08\textheight]{./clustering/dbs_scan_eps_0100_min_3.png}
 	\caption{$\boldsymbol \epsilon \bf= 0.100$}
 	\end{subfigure}
     \begin{subfigure}[h]{0.30\textwidth}
     \centering
-    \includegraphics[height=0.18\textheight]{./clustering/dbs_scan_eps_0230_min_3.png}
+    \includegraphics[height=0.08\textheight]{./clustering/dbs_scan_eps_0230_min_3.png}
 	\caption{$\boldsymbol \epsilon \bf = 0.230$}
     \end{subfigure}
     \begin{subfigure}[h]{0.30\textwidth}
     \centering
-    \includegraphics[height=0.18\textheight]{./clustering/dbs_scan_eps_0300_min_3.png}
+    \includegraphics[height=0.08\textheight]{./clustering/dbs_scan_eps_0300_min_3.png}
 	\caption{$\boldsymbol \epsilon \bf = 0.300$}
     \end{subfigure}
 
@@ -108,16 +108,16 @@ In this method, there are 2 hyperparameters $\epsilon$ and $m_{data}$. The varia
 
 In this section, we will perform K-Means and Soft-K-Means clustering methods and looking at different metrics. If we optimized the algorithm regarding the RSS, we always found a large number of cluster as a result as we can see on figure \ref{fig:figure7}. The higher is the number of cluster K, the lower is the RSS value. Thus, it is not relevant to optimize regarding the RSS because at the end, it will have more cluster than expected. 
 
-\begin{figure} [ht]
+\begin{figure} [h]
 \centering
 	\begin{subfigure}[h]{0.45\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/opt_RSS_k_soft_beta_10_range8.png}
+	\includegraphics[height=0.08\textheight]{./clustering/opt_RSS_k_soft_beta_10_range8.png}
 	\caption{\bf Soft K-means ($\boldsymbol \beta \bf = 10$ - range [0,8])}
 	\end{subfigure}
     \begin{subfigure}[h]{0.45\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/opt_RSS_k_mean_L2_range8.png}
+    \includegraphics[height=0.08\textheight]{./clustering/opt_RSS_k_mean_L2_range8.png}
 	\caption{\bf K-means (norm L2 - range [0,8])}
     \end{subfigure}
 \caption{Results of optimization regarding RSS}
@@ -130,23 +130,24 @@ Once we optimized the algorithm with respect to a specific metric (BIC-AIC), we 
 \centering
 	\begin{subfigure}[t]{0.25\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/opt_AIC_k_soft_beta_10_range7.png}
+	\includegraphics[height=0.08\textheight]{./clustering/opt_AIC_k_soft_beta_10_range7.png}
 	\caption{\bf Soft K-means - $\boldsymbol \beta \bf=10$}
 	\end{subfigure}
-    \hspace{20mm}
+	\hspace{20mm}
     \begin{subfigure}[t]{0.50\textwidth}
-	\includegraphics[height=0.15\textheight,right]{./clustering/curve_opt_AIC_k_soft_beta_10_range7.png}
+    \centering
+	\includegraphics[height=0.08\textheight]{./clustering/curve_opt_AIC_k_soft_beta_10_range7.png}
 	\caption{\bf Curve of optimization - Soft K-means $\boldsymbol \beta \bf = 10$. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
 	\end{subfigure}\\
     \begin{subfigure}[t]{0.25\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight, right]{./clustering/opt_AIC_k_mean_L2_range5.png}
+    \includegraphics[height=0.08\textheight]{./clustering/opt_AIC_k_mean_L2_range5.png}
 	\caption{\bf K-means - norm L2}
     \end{subfigure} 
-    \hspace{20mm}
+	\hspace{20mm}
     \begin{subfigure}[t]{0.50\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/curve_opt_AIC_k_mean_L2_range5.png}
+    \includegraphics[height=0.08\textheight]{./clustering/curve_opt_AIC_k_mean_L2_range5.png}
 	\caption{\bf Curve of optimization - K-means norm L2. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
     \end{subfigure}
 \caption{Results of optimization regarding AIC}
@@ -155,28 +156,28 @@ Once we optimized the algorithm with respect to a specific metric (BIC-AIC), we 
 
 Yet, optimizing regarding to the BIC allowed to get 2 clusters but the hyperparameter has to be well-tuned as we can see on the figure \ref{fig:figure9} especially in the case of Soft K-means with $\beta$. In our case, penalizing the likelihood with the number of free parameters with the number of data points (BIC) give results more favorable than penalizing only with the number of free parameter (AIC). 
 
-\begin{figure} [h]
+\begin{figure}[!h]
 \centering
 	\begin{subfigure}[t]{0.25\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/opt_BIC_k_soft_beta_20_range7.png}
+	\includegraphics[height=0.08\textheight]{./clustering/opt_BIC_k_soft_beta_20_range7.png}
 	\caption{\bf Soft K-means - $\boldsymbol \beta \bf = 10$}
 	\end{subfigure}
     \hspace{20mm}
     \begin{subfigure}[t]{0.50\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/curve_opt_BIC_k_soft_beta_20_range7.png}
+	\includegraphics[height=0.08\textheight]{./clustering/curve_opt_BIC_k_soft_beta_20_range7.png}
 	\caption{\bf Curve of optimization - Soft K-means $\boldsymbol \beta \bf = 20$. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
 	\end{subfigure}\\
     \begin{subfigure}[t]{0.25\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/opt_BIC_k_mean_L2_range5.png}
+    \includegraphics[height=0.08\textheight]{./clustering/opt_BIC_k_mean_L2_range5.png}
 	\caption{\bf K-means - norm L2}
     \end{subfigure}
     \hspace{20mm}
     \begin{subfigure}[t]{0.50\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/curve_opt_BIC_k_mean_L2_range5.png}
+    \includegraphics[height=0.08\textheight]{./clustering/curve_opt_BIC_k_mean_L2_range5.png}
 	\caption{\bf Curve of optimization - K-means norm L2. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
     \end{subfigure}
 \caption{Results of optimization regarding BIC}
@@ -188,31 +189,31 @@ In this part, we will evaluate the semi-supervised learning on our dataset. We v
 
 With the soft-K-means method and 10\% of the data labeled, we obtained 3 clusters (\ref{fig:figure10a}) whereas we expected only 2 but the F1-measure is equal to 0.90, close to 1. If we increased the ratio to 50\% the algorithm is able to separate the data into 2 clusters (\ref{fig:figure10b}) and we have a good F1-measure of 0.91. 
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 	\begin{subfigure}[h]{0.25\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/opt_F1_10__soft_k__beta_10_range7.png}
+	\includegraphics[height=0.08\textheight]{./clustering/opt_F1_10__soft_k__beta_10_range7.png}
 	\caption{$\boldsymbol \beta \bf = 10$\bf, 10\% labeled}
     \label{fig:figure10a}
 	\end{subfigure}
     \hspace{20mm}
     \begin{subfigure}[h]{0.50\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/curve_opt_F1_10__soft_k__beta_10_range7.png}
+	\includegraphics[height=0.08\textheight]{./clustering/curve_opt_F1_10__soft_k__beta_10_range7.png}
 	\caption{\bf Curve of optimization - $ \boldsymbol \beta \bf = 10$ - 10\% labeled. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
     \label{fig:figure10c}
 	\end{subfigure}\\
     \begin{subfigure}[h]{0.25\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/opt_F1_50__soft_k__beta_10_range7.png}
+    \includegraphics[height=0.08\textheight]{./clustering/opt_F1_50__soft_k__beta_10_range7.png}
 	\caption{$\boldsymbol \beta \bf = 10$\bf, 50\% labeled}
     \label{fig:figure10b}
     \end{subfigure}
     \hspace{20mm}
     \begin{subfigure}[h]{0.50\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/curve_opt_F1_50__soft_k__beta_10_range7.png}
+    \includegraphics[height=0.08\textheight]{./clustering/curve_opt_F1_50__soft_k__beta_10_range7.png}
 	\caption{\bf Curve of optimization - $\boldsymbol \beta \bf = 10$ - 50\% labeled. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
     \label{fig:figure10d}
     \end{subfigure}
@@ -222,31 +223,31 @@ With the soft-K-means method and 10\% of the data labeled, we obtained 3 cluster
 
 With the standard k-means method, in our case, the algorithm is not able to well-clustered the data points (\ref{fig:figure11a}) with 50\% of the dataset labeled. It needs 100\% to get 2 clusters (\ref{fig:figure11b}) at the end. Thus, this algorithm is not relevant in this problem because it costs a lot in terms of data labeled. 
 
-\begin{figure}[h]
+\begin{figure}[!h]
 \centering
 	\begin{subfigure}[h]{0.25\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/opt_F1_50__k_mean_L2_range7.png}
+	\includegraphics[height=0.08\textheight]{./clustering/opt_F1_50__k_mean_L2_range7.png}
 	\caption{\bf L2 norm - 50\% labeled}
     \label{fig:figure11a}
 	\end{subfigure}
     \hspace{20mm}
 	\begin{subfigure}[h]{0.50\textwidth}
     \centering
-	\includegraphics[height=0.15\textheight]{./clustering/curve_opt_F1_50__k_mean_L2_range7.png}
+	\includegraphics[height=0.08\textheight]{./clustering/curve_opt_F1_50__k_mean_L2_range7.png}
 	\caption{\bf Curve of optimization - L2 norm - 50\% labeled. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
     \label{fig:figur11c}
 	\end{subfigure}\\ 
     \begin{subfigure}[h]{0.25\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/opt_F1_100__k_mean_L2_range7.png}
+    \includegraphics[height=0.08\textheight]{./clustering/opt_F1_100__k_mean_L2_range7.png}
 	\caption{\bf L2 norm - 100\% labeled}
     \label{fig:figure11b}
     \end{subfigure}
     \hspace{20mm}
     \begin{subfigure}[h]{0.50\textwidth}
     \centering
-    \includegraphics[height=0.15\textheight]{./clustering/curve_opt_F1_100__k_mean_L2_range7.png}
+    \includegraphics[height=0.08\textheight]{./clustering/curve_opt_F1_100__k_mean_L2_range7.png}
 	\caption{\bf Curve of optimization - L2 norm - 100\% labeled. (\textcolor{gray}{RSS}, \textcolor{red}{BIC}, \textcolor{green}{AIC} and \textcolor{blue}{F1-Measure})}
     \label{fig:figure11d}
     \end{subfigure}
