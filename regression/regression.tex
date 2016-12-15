@@ -2,17 +2,13 @@
 \label{regression}
 %Report on performance when running the different non-linear regression methods. Report on values tested for i) the hyperparameters, ii) the training/testing ratios, iii) number of folds for crossvalidation. Give performance results only for the most interesting choices of hyperparameters, training/testing ratios and number of folds.
 
-\subsection{Introduction}
-% introduction and precise the 2-D plan that we used to do the regression,  the qualitative one, we will use e3e13
-Firstly, we choose the best input dimension for regression. We select the one which has low overlapping value.
-
 \subsection{GMR} 
 % GMR: test the 3 types of covariance matrices; change the amount of components per class and the initialization method.
 
 %test the algorithms using different ratios of training/testing samples.
 
 %Run cross-validation on these parameters using the \Compare" window in MLDemos to obtain an estimation of the variance of the results you obtain. Generate graphs and tables of the results you obtain.
-
+Firstly, we choose the best input dimension for regression. We select the one which has low overlapping value.
 In this section, we will performed a Gaussian Mixture Regression and changing the different parameters of this model. 
 \subsubsection{Qualitative evaluation}
 Firstly, we evaluate the influence of the covariance matrice on the regression with a K-means initialization, 1 mixture component and a training ratio of 100\%. Results are shown on figure \ref{fig:covariance_matrix_gmr}.
@@ -21,17 +17,17 @@ Firstly, we evaluate the influence of the covariance matrice on the regression w
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/spheri_kmeans_1_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/spheri_kmeans_1_mixture_100train.png}
 \caption{\bf Spherical}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/diag_kmeans_1_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/diag_kmeans_1_mixture_100train.png}
 \caption{\bf Diagonal}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_1_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_1_mixture_100train.png}
 \caption{\bf Full}
 \end{subfigure}
 \caption{GMR : influence of covariance matrix}
@@ -53,12 +49,12 @@ Then we evaluate the effect of the number of mixture components with a K-means i
 \centering
 \begin{subfigure}[h]{0.45\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_3_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_3_mixture_100train.png}
 \caption{\bf 3 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.45\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_6_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_6_mixture_100train.png}
 \caption{\bf 6 components}
 \end{subfigure}
 
@@ -76,17 +72,17 @@ Then, the effect of the initialization is tackled. We used a full covariance mat
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_uniform_4_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_uniform_4_mixture_100train.png}
 \caption{\bf Uniform - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_random_4_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_random_4_mixture_100train.png}
 \caption{\bf Random - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_random_7_mixture_100train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_random_7_mixture_100train.png}
 \caption{\bf Random - 7 components}
 \end{subfigure}
 \caption{GMR : influence of initialization}
@@ -102,17 +98,17 @@ Then, we change the training ratio using a full covariance matrix and a kmeans i
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_4_mixture_33train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_4_mixture_33train.png}
 \caption{\bf 33\% - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_4_mixture_66train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_4_mixture_66train.png}
 \caption{\bf 66\% - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_6_mixture_33train.png}
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_6_mixture_33train.png}
 \caption{\bf 33\% - 6 components}
 \end{subfigure}
 \caption{GMR : influence of training ratio}
@@ -165,31 +161,31 @@ Then, we decrease the train test ratio to 33\%, the figure \ref{fig_RBF_0_001_10
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/RBF_0_001_10_0_2_100.png}
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_10_0_2_100.png}
 \caption{\bf kernel : 0.001, C-value:10, $\epsilon-tube$ : 0.2, TR: 100\%}
 \label{fig_RBF_0_001_10_0_2_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/RBF_0_3_10_0_2_100.png}
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_3_10_0_2_100.png}
 \caption{\bf kernel : 0.3, C-value:10, $\epsilon-tube$ : 0.2, TR: 100\%}
 \label{fig_RBF_0_3_10_0_2_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/RBF_0_3_1_5_0_2_100.png}
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_3_1_5_0_2_100.png}
 \caption{\bf kernel : 0.3, C-value:1.5, $\epsilon-tube$ : 0.2, TR: 100\%}
 \label{fig_RBF_0_3_1_5_0_2_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/RBF_0_001_5_0_05_100.png}
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_5_0_05_100.png}
 \caption{\bf kernel : 0.001, C-value:5, $\epsilon-tube$ : 0.05, TR: 100\%}
 \label{fig_RBF_0_001_5_0_05_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.08\textheight]{./regression/RBF_0_001_10_0_15_33.png}
+\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_10_0_15_33.png}
 \caption{\bf kernel : 0.001, C-value:10, $\epsilon-tube$ : 0.15, TR: 33\%}
 \label{fig_RBF_0_001_10_0_15_33}
 \end{subfigure}
