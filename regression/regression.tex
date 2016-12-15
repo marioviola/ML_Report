@@ -21,17 +21,17 @@ Firstly, we evaluate the influence of the covariance matrice on the regression w
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/spheri_kmeans_1_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/spheri_kmeans_1_mixture_100train.png}
 \caption{\bf Spherical}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/diag_kmeans_1_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/diag_kmeans_1_mixture_100train.png}
 \caption{\bf Diagonal}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_1_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_1_mixture_100train.png}
 \caption{\bf Full}
 \end{subfigure}
 \caption{GMR : influence of covariance matrix}
@@ -53,12 +53,12 @@ Then we evaluate the effect of the number of mixture components with a K-means i
 \centering
 \begin{subfigure}[h]{0.45\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_3_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_3_mixture_100train.png}
 \caption{\bf 3 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.45\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_6_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_6_mixture_100train.png}
 \caption{\bf 6 components}
 \end{subfigure}
 
@@ -76,17 +76,17 @@ Then, the effect of the initialization is tackled. We used a full covariance mat
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_uniform_4_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_uniform_4_mixture_100train.png}
 \caption{\bf Uniform - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_random_4_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_random_4_mixture_100train.png}
 \caption{\bf Random - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_random_7_mixture_100train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_random_7_mixture_100train.png}
 \caption{\bf Random - 7 components}
 \end{subfigure}
 \caption{GMR : influence of initialization}
@@ -102,17 +102,17 @@ Then, we change the training ratio using a full covariance matrix and a kmeans i
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_4_mixture_33train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_4_mixture_33train.png}
 \caption{\bf 33\% - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_4_mixture_66train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_4_mixture_66train.png}
 \caption{\bf 66\% - 4 components}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_6_mixture_33train.png}
+\includegraphics[height=0.08\textheight]{./regression/full_cov_kmeans_6_mixture_33train.png}
 \caption{\bf 33\% - 6 components}
 \end{subfigure}
 \caption{GMR : influence of training ratio}
@@ -126,7 +126,7 @@ If we used a too low number of mixture with 33\% of training ratio, the model ca
 In this section, we performed a quantitative evaluation on the all dimensions dataset. We compared different configuration of parameters and looked at the regression error in terms of MSE. We used cross-validation upon 30 folds. Results are shown in figure \ref{fig:quantitative_gmr}.
 \begin{figure}[!ht]
 \centering
-\includegraphics[height=0.15\textheight]{./regression/quantitave_66train_ratio_error_testing.png}
+\includegraphics[height=0.08\textheight]{./regression/quantitave_66train_ratio_error_testing.png}
 \caption{\bf Error testing - 66\% Training ratio}
 \label{fig:quantitative_gmr}
 \end{figure}
@@ -165,31 +165,31 @@ Then, we decrease the train test ratio to 33\%, the figure \ref{fig_RBF_0_001_10
 \centering
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_10_0_2_100.png}
+\includegraphics[height=0.08\textheight]{./regression/RBF_0_001_10_0_2_100.png}
 \caption{\bf kernel : 0.001, C-value:10, $\epsilon-tube$ : 0.2, TR: 100\%}
 \label{fig_RBF_0_001_10_0_2_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/RBF_0_3_10_0_2_100.png}
+\includegraphics[height=0.08\textheight]{./regression/RBF_0_3_10_0_2_100.png}
 \caption{\bf kernel : 0.3, C-value:10, $\epsilon-tube$ : 0.2, TR: 100\%}
 \label{fig_RBF_0_3_10_0_2_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/RBF_0_3_1_5_0_2_100.png}
+\includegraphics[height=0.08\textheight]{./regression/RBF_0_3_1_5_0_2_100.png}
 \caption{\bf kernel : 0.3, C-value:1.5, $\epsilon-tube$ : 0.2, TR: 100\%}
 \label{fig_RBF_0_3_1_5_0_2_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_5_0_05_100.png}
+\includegraphics[height=0.08\textheight]{./regression/RBF_0_001_5_0_05_100.png}
 \caption{\bf kernel : 0.001, C-value:5, $\epsilon-tube$ : 0.05, TR: 100\%}
 \label{fig_RBF_0_001_5_0_05_100}
 \end{subfigure}
 \begin{subfigure}[h]{0.3\textwidth}
 \centering
-\includegraphics[height=0.11\textheight]{./regression/RBF_0_001_10_0_15_33.png}
+\includegraphics[height=0.08\textheight]{./regression/RBF_0_001_10_0_15_33.png}
 \caption{\bf kernel : 0.001, C-value:10, $\epsilon-tube$ : 0.15, TR: 33\%}
 \label{fig_RBF_0_001_10_0_15_33}
 \end{subfigure}
@@ -205,7 +205,7 @@ As shown on the figure \ref{fig:quantitative_svr}, the configuration which has t
 % ADD MSE qualitative 66
 \begin{figure}[!ht]
 \centering
-\includegraphics[height=0.15\textheight]{./regression/MSE_quantitative_66.png}
+\includegraphics[height=0.08\textheight]{./regression/MSE_quantitative_66.png}
 \caption{\bf Error testing - 66\% Training ratio}
 \label{fig:quantitative_svr}
 \end{figure}
