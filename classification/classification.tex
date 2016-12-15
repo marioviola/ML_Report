@@ -15,17 +15,17 @@ Secondly, we have evaluated the effect of the training/testing ratio on the perf
 \centering
 	\begin{subfigure}[h]{0.32\textwidth}
     \centering
-	\includegraphics[height=0.11\textheight]{./classification/full_var_gmm_1_10pourcent_test.png}
+	\includegraphics[height=0.08\textheight]{./classification/full_var_gmm_1_10pourcent_test.png}
 	\caption{\bf Train ratio = 10\%}
 	\end{subfigure}
     \begin{subfigure}[h]{0.32\textwidth}
     \centering
-    \includegraphics[height=0.11\textheight]{./classification/full_var_gmm_1_50pourcent_test.png}
+    \includegraphics[height=0.08\textheight]{./classification/full_var_gmm_1_50pourcent_test.png}
 	\caption{\bf Train ratio = 50\%}
     \end{subfigure}
     \begin{subfigure}[h]{0.32\textwidth}
     \centering
-    \includegraphics[height=0.11\textheight]{./classification/full_var_gmm_1_75pourcent_test.png}
+    \includegraphics[height=0.08\textheight]{./classification/full_var_gmm_1_75pourcent_test.png}
 	\caption{\bf Train ratio = 75\%}
     \end{subfigure}
 
@@ -39,12 +39,12 @@ As we have 60 samples in our dataset, with a training ratio of 10\%, only 6 samp
 \centering
 	\begin{subfigure}[h]{0.49\textwidth}
     \centering
-	\includegraphics[height=0.14\textheight]{./classification/f_measure_testing_75pourcent.png}
+	\includegraphics[height=0.08\textheight]{./classification/f_measure_testing_75pourcent.png}
 	\caption{\bf F-measure on testing set}
 	\end{subfigure}
     \begin{subfigure}[h]{0.49\textwidth}
     \centering
-    \includegraphics[height=0.14\textheight]{./classification/f_measure_training_75pourcent.png}
+    \includegraphics[height=0.08\textheight]{./classification/f_measure_training_75pourcent.png}
 	\caption{\bf F-measure on training set}
     \end{subfigure}
 
@@ -56,26 +56,29 @@ Thirdly, we have evaluated the effect of number component per class. We used a f
 
 \begin{figure} [ht]
 \centering
-	\begin{subfigure}[h]{0.40\textwidth}
+	\begin{subfigure}[h]{0.20\textwidth}
     \centering
-	\includegraphics[height=0.12\textheight]{./classification/gmm_2_25pourcent_full_var.png}
+	\includegraphics[height=0.08\textheight]{./classification/gmm_2_25pourcent_full_var.png}
 	\caption{\bf 2 components per class - 25\% train ratio}
 	\end{subfigure}
-    \hspace{20mm}
-	\begin{subfigure}[h]{0.40\textwidth}
+	\hfill
+    %\hspace{20mm}
+	\begin{subfigure}[h]{0.20\textwidth}
     \centering
-	\includegraphics[height=0.12\textheight]{./classification/gmm_2_50pourcent_full_var.png}
+	\includegraphics[height=0.08\textheight]{./classification/gmm_2_50pourcent_full_var.png}
 	\caption{\bf 2 components per class - 50\% train ratio}
-	\end{subfigure}\\
-    \begin{subfigure}[h]{0.40\textwidth}
+	\end{subfigure}%\\
+	\hfill
+    \begin{subfigure}[h]{0.20\textwidth}
     \centering
-    \includegraphics[height=0.12\textheight]{./classification/gmm_5_25pourcent_full_var.png}
+    \includegraphics[height=0.08\textheight]{./classification/gmm_5_25pourcent_full_var.png}
 	\caption{\bf 5 components per class - 25\% train ratio}
     \end{subfigure}
-    \hspace{20mm}
-    \begin{subfigure}[h]{0.40\textwidth}
+    \hfill
+    %\hspace{20mm}
+    \begin{subfigure}[h]{0.20\textwidth}
     \centering
-    \includegraphics[height=0.12\textheight]{./classification/overfitting_case_gmm_5_25_.png}
+    \includegraphics[height=0.08\textheight]{./classification/overfitting_case_gmm_5_25_.png}
 	\caption{\bf F-measure on testing set - 25\% train ratio - 5 components}
     \label{overfitting_case_5components}
     \end{subfigure}
@@ -91,19 +94,19 @@ Then, influence of covariance matrix is evaluated. We've seen previously that wi
 \centering
 	\begin{subfigure}[h]{0.30\textwidth}
     \centering
-	\includegraphics[height=0.13\textheight]{./classification/gmm_diag_cov_33pourcent_2gmm.png}
+	\includegraphics[height=0.08\textheight]{./classification/gmm_diag_cov_33pourcent_2gmm.png}
 	\caption{\bf GMM Diagonal Covariance - 33\% - 2 Components}
 	\end{subfigure}
     \hspace{3mm}
     \begin{subfigure}[h]{0.3\textwidth}
     \centering
-    \includegraphics[height=0.13\textheight]{./classification/gmm_diag_cov_100pourcent_1gmm.png}
+    \includegraphics[height=0.08\textheight]{./classification/gmm_diag_cov_100pourcent_1gmm.png}
 	\caption{\bf GMM Diagonal Covariance - 100\% - 1 Component}
     \end{subfigure}
     \hspace{3mm}
     \begin{subfigure}[h]{0.3\textwidth}
     \centering
-    \includegraphics[height=0.13\textheight]{./classification/gmm_spherical_cov_50pourcent_2gmm.png}
+    \includegraphics[height=0.08\textheight]{./classification/gmm_spherical_cov_50pourcent_2gmm.png}
 	\caption{\bf GMM Spherical Covariance - 50\% - 2 Components}
     \end{subfigure}
 
@@ -130,23 +133,26 @@ As we can observe on figure \ref{fig:SVM_linear_C_value}, the resulting classifi
 
 \begin{figure}[ht]
 \centering
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_1000_TR_50_.png}
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_linear_c_1000_TR_50_.png}
 \caption{\bf C-value : 1000 and train ratio : 50\%}
 \label{fig:SVM_linear_C_value_1000}
 \end{subfigure}
-\hspace{20mm}
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_0_5_TR_25_.png}
+\hfill
+%\hspace{20mm}
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_linear_c_0_5_TR_25_.png}
 \caption{\bf C-value : 0.5 and train ratio : 25\%}
-\end{subfigure}\\
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_1_TR_25_.png}
+\end{subfigure}%\\
+\hfill
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_linear_c_1_TR_25_.png}
 \caption{\bf C-value : 1 and train ratio : 25\%}
 \end{subfigure}
-\hspace{20mm}
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_linear_c_5_TR_25_.png}
+\hfill
+%\hspace{20mm}
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_linear_c_5_TR_25_.png}
 \caption{\bf C-value : 5 and train ratio : 25\%}
 \label{fig:SVM_linear_C_value_5}
 \end{subfigure}
@@ -172,26 +178,28 @@ Finally, we try with a higher kernel width, as shown on figure \ref{fig:SVM_rbf_
 
 \begin{figure}[!ht]
 \centering
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_2_c_0_5_TR_25_.png}
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_rbf_w_0_2_c_0_5_TR_25_.png}
 \caption{\bf C-value : 0.5 and kernel width : 0.2}
 \label{fig:SVM_rbf_w_0_2_c_0_5_TR_25_}
 \end{subfigure}
-\hspace{20mm}
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_2_c_1_TR_25_.png}
+\hfill
+%\hspace{20mm}
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_rbf_w_0_2_c_1_TR_25_.png}
 \caption{\bf C-value : 1 and kernel width : 0.2}
 \label{fig:SVM_rbf_w_0_2_c_1_TR_25_}
-\end{subfigure}\\
-
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_2_c_10_TR_25_.png}
+\end{subfigure}%\\
+\hfill
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_rbf_w_0_2_c_10_TR_25_.png}
 \caption{\bf C-value : 10 and kernel width : 0.2}
 \label{fig:SVM_rbf_w_0_2_c_10_TR_25_}
 \end{subfigure}
-\hspace{20mm}
-\begin{subfigure}[h]{0.31\textwidth}
-\includegraphics[height=0.11\textheight]{./classification/SVM_rbf_w_0_5_c_0_5_TR_25_.png}
+\hfill
+%\hspace{20mm}
+\begin{subfigure}[t]{0.2\textwidth}
+\includegraphics[height=0.08\textheight]{./classification/SVM_rbf_w_0_5_c_0_5_TR_25_.png}
 \caption{\bf C-value : 0.5 and kernel width : 0.5}
 \label{fig:SVM_rbf_w_0_5_c_0_5_TR_25_}
 \end{subfigure}
