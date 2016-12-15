@@ -15,11 +15,30 @@ Firstly, we choose the best input dimension for regression. We select the one wh
 
 In this section, we will performed a Gaussian Mixture Regression and changing the different parameters of this model. 
 \subsubsection{Qualitative evaluation}
-Firstly, we evaluate the influence of the covariance matrice on the regression with a K-means initialization, 1 mixture component and a training ratio of 100\%. Results are shown in Fig.
+Firstly, we evaluate the influence of the covariance matrice on the regression with a K-means initialization, 1 mixture component and a training ratio of 100\%. Results are shown on figure \ref{fig:covariance_matrix_gmr}.
 
-%% PUT FIG diag_kmeans_1_1_mixture_100train
-%% PUT FIG spheri_kmeans_1_1_mixture_100train
-%% PUT FIG full_cov_kmeans_1_1_mixture_100train
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/spheri_kmeans_1_mixture_100train.png}
+\caption{\bf Spherical}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/diag_kmeans_1_mixture_100train.png}
+\caption{\bf Diagonal}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_1_mixture_100train.png}
+\caption{\bf Full}
+\end{subfigure}
+\caption{GMR : influence of covariance matrix}
+\label{fig:covariance_matrix_gmr}
+\end{figure}
+
+
 
 A spherical and diagonal covariance matrix both give a straight line which represents the mean of the datapoint. In fact, following the regressive signal obtained :
 \begin{equation}
@@ -28,41 +47,92 @@ y = \sum_{i=1}^K \beta_i(x)(\mu_y^i + \Sigma_{xy}^i (\Sigma_{xx}^i)^{-1}(x - \mu
 \end{equation}
 since for spherical and diagonal the quantity, $\Sigma_{xy}^i = 0$, the result is just the mean of the datapoint. 
 
-Then we evaluate the effect of the number of mixture components with a K-means initialization, a full covariance matrix and a training ratio of 100\%. Results are shown in Fig. 
- 
-%% PUT FIG full_cov_kmeans_1_6_mixture_100train
-%% PUT FIG full_cov_kmeans_1_3_mixture_100train
+Then we evaluate the effect of the number of mixture components with a K-means initialization, a full covariance matrix and a training ratio of 100\%. Results are shown on figure \ref{fig:number_mixture_components}.
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[h]{0.45\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_3_mixture_100train.png}
+\caption{\bf 3 components}
+\end{subfigure}
+\begin{subfigure}[h]{0.45\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_6_mixture_100train.png}
+\caption{\bf 6 components}
+\end{subfigure}
+
+\caption{GMR : influence of number of mixture components}
+\label{fig:number_mixture_components}
+\end{figure}
+
 
 With 3 mixture components, there is a poor fit with the large gaussian on the end of the dataset. That is due to the unbalanced number of points in relation to the region and the spread of those points. A solution can be to increase the number of points. In fact, with 6 mixture components, the datapoints are better fitted.
 
-Then, the effect of the initialization is tackled. We used a full covariance matrix and training ratio of 100\%. Results are shown in Fig.
+Then, the effect of the initialization is tackled. We used a full covariance matrix and training ratio of 100\%. Results are shown on figure \ref{fig:initialization_gmr}.
 
-%% PUT FIG full_cov_random_1_7_mixture_100train
-%% PUT FIG full_cov_random_1_4_mixture_100train
-%% PUT FIG full_cov_uniform_1_4_mixture_100train
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_uniform_4_mixture_100train.png}
+\caption{\bf Uniform - 4 components}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_random_4_mixture_100train.png}
+\caption{\bf Random - 4 components}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_random_7_mixture_100train.png}
+\caption{\bf Random - 7 components}
+\end{subfigure}
+\caption{GMR : influence of initialization}
+\label{fig:initialization_gmr}
+\end{figure}
 
 We can see that depending on the initialization used, the gaussians fit different points and give different results. For instance with a random initialization and 4 mixture components, in the top, 2 datapoints are fit by one gaussian. Hence, with only 4 mixtures components, the other 3 gaussians can't fit well the datapoint. Hence, we need to increase the number of mixture components which is more costly. Using a uniform or a k-means initialization avoid this situation. 
 
-Then, we change the training ratio using a full covariance matrix and a kmeans initialization. Results are shown in Fig.
+Then, we change the training ratio using a full covariance matrix and a kmeans initialization. Results are shown on figure \ref{fig:training_ratio_gmr}.
 
-%% PUT FIG full_cov_kmeans_1_4_mixture_33train
-%% PUT FIG full_cov_kmeans_1_4_mixture_66train
-%% PUT FIG full_cov_kmeans_1_6_mixture_33train
+
+\begin{figure}[!ht]
+\centering
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_4_mixture_33train.png}
+\caption{\bf 33\% - 4 components}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_4_mixture_66train.png}
+\caption{\bf 66\% - 4 components}
+\end{subfigure}
+\begin{subfigure}[h]{0.3\textwidth}
+\centering
+\includegraphics[height=0.11\textheight]{./regression/full_cov_kmeans_6_mixture_33train.png}
+\caption{\bf 33\% - 6 components}
+\end{subfigure}
+\caption{GMR : influence of training ratio}
+\label{fig:training_ratio_gmr}
+\end{figure}
 
 If we used a too low number of mixture with 33\% of training ratio, the model can missed some points depending on the initialization. To avoid this, we've to enhance the number of datapoint in the training set. As expected with 66\% of training ratio, the model is more able to fit the data. Moreover, we can notice that while increasing the complexity of the model with a larger number of mixture components, with a low training ratio, the model is not able to fit well the datapoints.
 
 \subsubsection{Quantitative evaluation}
 
-In this section, we performed a quantitative evaluation on the all dimensions dataset. We compared different configuration of parameters and looked at the regression error in terms of MSE. We used cross-validation upon 30 folds. Results are shown in Fig.
+In this section, we performed a quantitative evaluation on the all dimensions dataset. We compared different configuration of parameters and looked at the regression error in terms of MSE. We used cross-validation upon 30 folds. Results are shown in figure \ref{fig:quantitative_gmr}.
+\begin{figure}[!ht]
+\centering
+\includegraphics[height=0.15\textheight]{./regression/quantitave_66train_ratio_error_testing.png}
+\caption{\bf Error testing - 66\% Training ratio}
+\label{fig:quantitative_gmr}
+\end{figure}
 
-%% PUT FIG quantitative_33train_ratio_error_training
-%% PUT FIG quantitative_33train_ratio_error_testing
-%% PUT FIG quantitative_66train_ratio_error_training
-%% PUT FIG quantitative_66train_ratio_error_testing
 
-We can notice that in overall, while increasing the training ratio, the error on testing set decreased a little.
-
-
+We have seen that in overall, while increasing the training ratio, the error on testing set decreased a little. Moreover, when we take a look the error for each configuration chosen, it seems that the difference between each model is small. We can also notice the variance is large on the figure for every model meaning that the models are reliable. However, it is very dependent on the initialization as we have seen while running many times.
 
 
 \subsection{SVR}
